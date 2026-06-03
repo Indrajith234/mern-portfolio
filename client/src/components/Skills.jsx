@@ -26,10 +26,11 @@ const getIcon = (iconName, size = 26) => {
 };
 
 const categoryConfig = {
-  Frontend: { badge: 'bg-blue-500/10 border-blue-500/20 text-blue-400', icon: '🎨', text: 'text-blue-400' },
-  Backend:  { badge: 'bg-green-500/10 border-green-500/20 text-green-400', icon: '⚙️', text: 'text-green-400' },
-  Database: { badge: 'bg-yellow-500/10 border-yellow-500/20 text-yellow-400', icon: '🗄️', text: 'text-yellow-400' },
-  Tools:    { badge: 'bg-purple-500/10 border-purple-500/20 text-purple-400', icon: '🛠️', text: 'text-purple-400' },
+  Frontend:   { badge: 'bg-blue-500/10 border-blue-500/20 text-blue-400', icon: '🎨', text: 'text-blue-400' },
+  Backend:    { badge: 'bg-green-500/10 border-green-500/20 text-green-400', icon: '⚙️', text: 'text-green-400' },
+  Database:   { badge: 'bg-yellow-500/10 border-yellow-500/20 text-yellow-400', icon: '🗄️', text: 'text-yellow-400' },
+  Tools:      { badge: 'bg-purple-500/10 border-purple-500/20 text-purple-400', icon: '🛠️', text: 'text-purple-400' },
+  Deployment: { badge: 'bg-orange-500/10 border-orange-500/20 text-orange-400', icon: '🚀', text: 'text-orange-400' },
 };
 
 const Skills = () => {
@@ -50,7 +51,7 @@ const Skills = () => {
     fetchSkills();
   }, []);
 
-  const categories = ['Frontend', 'Backend', 'Database', 'Tools'];
+  const categories = ['Frontend', 'Backend', 'Database', 'Tools', 'Deployment'];
 
   return (
     <section id="skills" className="py-24 relative">

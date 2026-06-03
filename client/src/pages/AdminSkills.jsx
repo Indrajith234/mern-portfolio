@@ -42,6 +42,17 @@ const ICON_LIBRARY = [
   { name: 'AWS', iconName: 'FaAws', category: 'Tools' },
   { name: 'Vercel', iconName: 'SiVercel', category: 'Tools' },
   { name: 'Netlify', iconName: 'SiNetlify', category: 'Tools' },
+  { name: 'Vercel', iconName: 'SiVercel', category: 'Deployment' },
+  { name: 'Netlify', iconName: 'SiNetlify', category: 'Deployment' },
+  { name: 'Render', iconName: 'SiRender', category: 'Deployment' },
+  { name: 'Heroku', iconName: 'SiHeroku', category: 'Deployment' },
+  { name: 'Railway', iconName: 'SiRailway', category: 'Deployment' },
+  { name: 'AWS', iconName: 'FaAws', category: 'Deployment' },
+  { name: 'DigitalOcean', iconName: 'SiDigitalocean', category: 'Deployment' },
+  { name: 'GitHub Pages', iconName: 'FaGithub', category: 'Deployment' },
+  { name: 'Firebase Hosting', iconName: 'SiFirebase', category: 'Deployment' },
+  { name: 'MongoDB Atlas', iconName: 'SiMongodb', category: 'Deployment' },
+  { name: 'Cloudinary', iconName: 'SiCloudinary', category: 'Deployment' },
   { name: 'NPM', iconName: 'FaNpm', category: 'Tools' },
 ];
 
@@ -52,7 +63,7 @@ const getIcon = (iconName, size = 20) => {
   return IconComponent ? <IconComponent size={size} /> : <span className="text-base">?</span>;
 };
 
-const CATEGORIES = ['Frontend', 'Backend', 'Database', 'Tools'];
+const CATEGORIES = ['Frontend', 'Backend', 'Database', 'Tools', 'Deployment'];
 
 const AdminSkills = () => {
   const [skills, setSkills] = useState([]);
