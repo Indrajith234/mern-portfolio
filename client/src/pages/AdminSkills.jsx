@@ -54,6 +54,16 @@ const ICON_LIBRARY = [
   { name: 'MongoDB Atlas', iconName: 'SiMongodb', category: 'Deployment' },
   { name: 'Cloudinary', iconName: 'SiCloudinary', category: 'Deployment' },
   { name: 'NPM', iconName: 'FaNpm', category: 'Tools' },
+  { name: 'ChatGPT', iconName: 'SiOpenai', category: 'AI' },
+  { name: 'GitHub Copilot', iconName: 'FaGithub', category: 'AI' },
+  { name: 'TensorFlow', iconName: 'SiTensorflow', category: 'AI' },
+  { name: 'PyTorch', iconName: 'SiPytorch', category: 'AI' },
+  { name: 'Jupyter', iconName: 'SiJupyter', category: 'AI' },
+  { name: 'Hugging Face', iconName: 'SiHuggingface', category: 'AI' },
+  { name: 'Google Gemini', iconName: 'SiGoogle', category: 'AI' },
+  { name: 'Scikit-learn', iconName: 'SiScikitlearn', category: 'AI' },
+  { name: 'Pandas', iconName: 'SiPandas', category: 'AI' },
+  { name: 'Numpy', iconName: 'SiNumpy', category: 'AI' },
 ];
 
 const allIcons = { ...FaIcons, ...SiIcons };
@@ -63,7 +73,7 @@ const getIcon = (iconName, size = 20) => {
   return IconComponent ? <IconComponent size={size} /> : <span className="text-base">?</span>;
 };
 
-const CATEGORIES = ['Frontend', 'Backend', 'Database', 'Tools', 'Deployment'];
+const CATEGORIES = ['Frontend', 'Backend', 'Database', 'Tools', 'Deployment', 'AI'];
 
 const AdminSkills = () => {
   const [skills, setSkills] = useState([]);

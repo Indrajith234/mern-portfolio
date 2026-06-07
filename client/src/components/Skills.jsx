@@ -31,6 +31,7 @@ const categoryConfig = {
   Database:   { badge: 'bg-yellow-500/10 border-yellow-500/20 text-yellow-400', icon: '🗄️', text: 'text-yellow-400' },
   Tools:      { badge: 'bg-purple-500/10 border-purple-500/20 text-purple-400', icon: '🛠️', text: 'text-purple-400' },
   Deployment: { badge: 'bg-orange-500/10 border-orange-500/20 text-orange-400', icon: '🚀', text: 'text-orange-400' },
+  AI:         { badge: 'bg-pink-500/10 border-pink-500/20 text-pink-400', icon: '🤖', text: 'text-pink-400' },
 };
 
 const Skills = () => {
@@ -51,7 +52,7 @@ const Skills = () => {
     fetchSkills();
   }, []);
 
-  const categories = ['Frontend', 'Backend', 'Database', 'Tools', 'Deployment'];
+  const categories = ['Frontend', 'Backend', 'Database', 'Tools', 'Deployment', 'AI'];
 
   return (
     <section id="skills" className="py-24 relative">
