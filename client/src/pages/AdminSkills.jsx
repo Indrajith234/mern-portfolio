@@ -55,6 +55,7 @@ const ICON_LIBRARY = [
   { name: 'Cloudinary', iconName: 'SiCloudinary', category: 'Deployment' },
   { name: 'NPM', iconName: 'FaNpm', category: 'Tools' },
   { name: 'ChatGPT', iconName: 'SiOpenai', category: 'AI' },
+  { name: 'Google Antigravity', iconName: 'SiGoogle', category: 'AI' },
   { name: 'GitHub Copilot', iconName: 'FaGithub', category: 'AI' },
   { name: 'TensorFlow', iconName: 'SiTensorflow', category: 'AI' },
   { name: 'PyTorch', iconName: 'SiPytorch', category: 'AI' },
