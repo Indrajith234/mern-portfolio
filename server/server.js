@@ -39,5 +39,12 @@ app.get('/', (req, res) => {
   res.json({ message: 'Portfolio API is running 🚀' });
 });
 
+// Global error handler — catches any unhandled errors and returns clean JSON
+app.use((err, req, res, next) => {
+  console.error('Unhandled error:', err.message);
+  const status = err.status || 500;
+  res.status(status).json({ message: err.message || 'Internal server error' });
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

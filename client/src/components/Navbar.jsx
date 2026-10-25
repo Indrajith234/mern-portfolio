@@ -12,6 +12,13 @@ const Navbar = ({ settings }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu on ESC key
+  useEffect(() => {
+    const handleEsc = (e) => { if (e.key === 'Escape') setMenuOpen(false); };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
   const navLinks = [
     { label: 'Home', id: 'home' },
     { label: 'About', id: 'about' },

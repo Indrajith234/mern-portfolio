@@ -5,8 +5,12 @@
 @tailwind utilities;
 
 * {
-  scroll-behavior: smooth;
   box-sizing: border-box;
+}
+
+/* Smooth scroll only for users who haven't opted out */
+@media (prefers-reduced-motion: no-preference) {
+  * { scroll-behavior: smooth; }
 }
 
 body {

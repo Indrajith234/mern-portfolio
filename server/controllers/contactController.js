@@ -9,6 +9,12 @@ const submitContact = async (req, res) => {
       return res.status(400).json({ message: 'All fields are required' });
     }
 
+    // Basic email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ message: 'Please provide a valid email address' });
+    }
+
     const newMessage = new Message({ name, email, message });
     await newMessage.save();
 

@@ -48,6 +48,18 @@ const updateProject = async (req, res) => {
     };
 
     if (req.file) {
+      // Delete the old Cloudinary image before saving the new one
+      const existing = await Project.findById(req.params.id);
+      if (existing?.imageUrl && existing.imageUrl.includes('cloudinary')) {
+        try {
+          const parts = existing.imageUrl.split('/');
+          const publicIdWithExt = parts.slice(-2).join('/');
+          const publicId = publicIdWithExt.replace(/\.[^/.]+$/, '');
+          await cloudinary.uploader.destroy(publicId);
+        } catch (e) {
+          console.error('Cloudinary old image delete error:', e.message);
+        }
+      }
       updateData.imageUrl = req.file.path;
     }
 

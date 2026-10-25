@@ -11,7 +11,7 @@ const Footer = ({ settings }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-400 text-sm flex items-center gap-1.5">
-            © 2025 <span className="gradient-text font-semibold">{name}</span>. Made with <FaHeart className="text-red-400" size={12} /> in India
+            © {new Date().getFullYear()} <span className="gradient-text font-semibold">{name}</span>. Made with <FaHeart className="text-red-400" size={12} /> in India
           </p>
           <div className="flex items-center gap-4">
             <a href={github} target="_blank" rel="noopener noreferrer" id="footer-github"

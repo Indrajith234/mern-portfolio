@@ -39,9 +39,7 @@ const ICON_LIBRARY = [
   { name: 'Postman', iconName: 'SiPostman', category: 'Tools' },
   { name: 'Figma', iconName: 'FaFigma', category: 'Tools' },
   { name: 'Linux', iconName: 'FaLinux', category: 'Tools' },
-  { name: 'AWS', iconName: 'FaAws', category: 'Tools' },
-  { name: 'Vercel', iconName: 'SiVercel', category: 'Tools' },
-  { name: 'Netlify', iconName: 'SiNetlify', category: 'Tools' },
+  { name: 'NPM', iconName: 'FaNpm', category: 'Tools' },
   { name: 'Vercel', iconName: 'SiVercel', category: 'Deployment' },
   { name: 'Netlify', iconName: 'SiNetlify', category: 'Deployment' },
   { name: 'Render', iconName: 'SiRender', category: 'Deployment' },
@@ -53,7 +51,6 @@ const ICON_LIBRARY = [
   { name: 'Firebase Hosting', iconName: 'SiFirebase', category: 'Deployment' },
   { name: 'MongoDB Atlas', iconName: 'SiMongodb', category: 'Deployment' },
   { name: 'Cloudinary', iconName: 'SiCloudinary', category: 'Deployment' },
-  { name: 'NPM', iconName: 'FaNpm', category: 'Tools' },
   { name: 'ChatGPT', iconName: 'SiOpenai', category: 'AI' },
   { name: 'Google Antigravity', iconName: 'SiGoogle', category: 'AI' },
   { name: 'GitHub Copilot', iconName: 'FaGithub', category: 'AI' },
@@ -175,7 +172,7 @@ const AdminSkills = () => {
                 autoFocus />
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 max-h-52 overflow-y-auto">
                 {filteredIcons.map((icon) => (
-                  <button key={icon.iconName} type="button" onClick={() => handleSelectIcon(icon)}
+                  <button key={`${icon.name}-${icon.category}`} type="button" onClick={() => handleSelectIcon(icon)}
                     className={`flex flex-col items-center gap-1.5 p-3 rounded-xl border transition-all text-xs ${
                       formData.iconName === icon.iconName
                         ? 'bg-primary/10 border-primary/40 text-primary'
